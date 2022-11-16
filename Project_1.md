@@ -29,16 +29,16 @@
 - *AWS account setup and Provisioning an Ubuntu Server*
 
 
-    ![ubuntu](/Projet-1/images-project1/Ubuntu.PNG)
+    ![ubuntu](./images-project1/Ubuntu.PNG)
 
-    ![EC2](/Projet-1/images-project1/Lamp-EC2.PNG)
+    ![EC2](./images-project1/Lamp-EC2.PNG)
 
 
 - Connecting to your EC2 Instance
 
 ssh into the Ec2 instance: `ssh -i "private_key.pem" ubuntu@Public DNS`
 
-![ssh](/Projet-1/images-project1/EC2-SSH-connection.PNG)
+![ssh](./images-project1/EC2-SSH-connection.PNG)
 
 ---
 ---
@@ -59,11 +59,11 @@ To verify that apache2 is running as a Service in our OS, use following command
 
 `sudo systemctl status apache2`
 
-![alt text](/Projet-1/images-project1/apache2_status_test.PNG)
+![Apache-satatus](./images-project1/apache2_status_test.PNG)
 
 *Updating the security group Configuration by openning port 80*
 
-![security-group](/Projet-1/images-project1/Security-group.PNG)
+![security-group](./images-project1/Security-group.PNG)
 
 
  Checking the access locally in our Ubuntu shell,:
@@ -74,7 +74,7 @@ or
  curl http://127.0.0.1:80
 ```
 
-![security-group](/Projet-1/images-project1/Apache-URL-test.PNG)
+![Test-URL](./images-project1/Apache-URL-test.PNG)
 
 
 ---
@@ -91,7 +91,7 @@ When the installation is finished, log in to the MySQL console by typing:
 `$ sudo mysql`
 
 
-![Mysql](/Projet-1/images-project1/Mysql.PNG)
+![Mysql](./images-project1/Mysql.PNG)
 
 
 Run the security script:
@@ -102,7 +102,7 @@ Testing the security setting by runing:
 
 `$ sudo mysql -p`
 
-![Mysql](/Projet-1/images-project1/Mysql_test.PNG)
+![Mysql](./images-project1/Mysql_test.PNG)
 
 ---
 ---
@@ -123,7 +123,7 @@ Once the installation is finished, you can run the following command to confirm 
 
 `php -v`
 
-![Mysql](/Projet-1/images-project1/PHP-V.PNG)
+![Mysql](./images-project1/PHP-V.PNG)
 
 ---
 ---
@@ -144,7 +144,7 @@ Once the installation is finished, you can run the following command to confirm 
 
  This will create a new blank file. Paste in the following bare-bones configuration by hitting on i on the keyboard to enter the insert mode, and paste the text:
 
- ```py
+```
  <VirtualHost *:80>
     ServerName projectlamp
     ServerAlias www.projectlamp 
@@ -154,11 +154,13 @@ Once the installation is finished, you can run the following command to confirm 
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
+
+
 Confirming with `ls` commande
 
 `sudo ls /etc/apache2/sites-available`
 
-![ConfigFile](/Projet-1/images-project1/ConfigFile.PNG)
+![ConfigFile](./images-project1/ConfigFile.PNG)
 
 use a2ensite command to enable the new virtual host:
 
@@ -177,7 +179,7 @@ Create an index.html file in the web root /var/www/projectlamp directory to test
 sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
 ```
 
-![Test-File](/Projet-1/images-project1/Test.hlm.PNG)
+![Test-File](./images-project1/Test.hlm.PNG)
 
 ---
 ---
@@ -214,7 +216,7 @@ This will open a blank file. Add the following text, which is valid PHP code, in
 phpinfo();
 ```
 
-![PHP](/Projet-1\images-project1\Apache-URL-test.PNG)
+![PHP](./images-project1/Apache-URL-test.PNG)
 
 ---
 ---
@@ -226,7 +228,3 @@ phpinfo();
 [Open ssh key management](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement?source=recommendations)
 
 [Markdown guide][https://www.markdownguide.org/cheat-sheet/]
-
-
-
-[def]: https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui
