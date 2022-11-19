@@ -223,8 +223,13 @@ phpinfo();
 
 ### **Links**
 ---
-[Install Open ssh Server][https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui
+[Install Open ssh Server](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui)
 
 [Open ssh key management](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement?source=recommendations)
 
-[Markdown guide][https://www.markdownguide.org/cheat-sheet
+[Markdown guide](https://www.markdownguide.org/cheat-sheet)
+
+[Windows VS-code Git and windows terminal installation-part1](https://www.youtube.com/watch?v=R-qcpehB5HY&t=0s)
+
+
+[Windows VS-code Git and windows terminal installation-part2](https://www.youtube.com/watch?v=jsNIlK5s6pI)
